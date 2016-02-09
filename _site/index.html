@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SRCSET Example</title>
+
+  <style>
+    * {
+    	box-sizing: border-box;
+    }
+    body {
+    	font-size: 1.25em;
+    }
+    img {
+      box-sizing: border-box;
+    	display: block;
+      float: left;
+      padding: 1em;
+    	width: 33%;
+    }
+
+
+    .image-1-hover {
+      background-image: url('./output/hover/image-1-notHover.jpg');
+      float: left;
+      margin: 1em;
+      height: 200px;
+      width: 200px;
+    }
+    .image-1-hover:hover {
+      background-image: url('./output/hover/image-1-hover.jpg');
+    }
+
+    .image-2-hover {
+      background-image: url('./output/hover/image-2-notHover.jpg');
+      float: left;
+      margin: 1em;
+      height: 200px;
+      width: 200px;
+    }
+    .image-2-hover:hover {
+      background-image: url('./output/hover/image-2-hover.jpg');
+    }
+
+    .image-3-hover {
+      background-image: url('./output/hover/image-3-notHover.jpg');
+      float: left;
+      margin: 1em;
+      height: 200px;
+      width: 200px;
+    }
+    .image-3-hover:hover {
+      background-image: url('./output/hover/image-3-hover.jpg');
+    }
+
+
+    img {
+      float: left;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <picture>
+  	<source
+  		media="(min-width: 36em)"
+  		srcset="./output/image-1-xl.jpg 1240w,
+              ./output/image-1-lg.jpg 1024w,
+              ./output/image-1-md.jpg 640w,
+              ./output/image-1-sm.jpg 320w" />
+  	<img
+  		src="./output/image-1-md.jpg"
+  		alt="Image #1" />
+  </picture>
+
+  <picture>
+    <source
+      media="(min-width: 36em)"
+      srcset="./output/image-2-xl.jpg 1240w,
+              ./output/image-2-lg.jpg 1024w,
+              ./output/image-2-md.jpg 640w,
+              ./output/image-2-sm.jpg 320w" />
+    <img
+      src="./output/image-2-md.jpg"
+      alt="Image #2" />
+  </picture>
+
+
+  <picture>
+    <source
+      media="(min-width: 36em)"
+      srcset="./output/image-3-xl.jpg 1240w,
+              ./output/image-3-lg.jpg 1024w,
+              ./output/image-3-md.jpg 640w,
+              ./output/image-3-sm.jpg 320w" />
+    <img
+      src="./output/image-3-md.jpg"
+      alt="Image #3" />
+  </picture>
+
+
+
+  <br />
+  <br />
+  <br />
+
+  <div class="image-1-hover"></div>
+  <div class="image-2-hover"></div>
+  <div class="image-3-hover"></div>
+
+
+
+  <br />
+  <br />
+  <br />
+
+  <img src="output/watermark/image-1-lg-wm.jpg" alt="image-1-lg-wm" />
+  <img src="output/watermark/image-1-md-wm.jpg" alt="image-1-md-wm" />
+
+  <img src="output/watermark/image-2-lg-wm.jpg" alt="image-1-lg-wm" />
+  <img src="output/watermark/image-2-md-wm.jpg" alt="image-1-md-wm" />
+
+
+
+</body>
+</html>
