@@ -22,7 +22,7 @@ Dependencies: Install `node` and `gulp`
 ## Repos to Add Support:
 - https://github.com/scottjehl/picturefill
 - https://github.com/aFarkas/lazysizes
-- 
+
 
 ## Browser Support:
 - http://caniuse.com/#search=picture
